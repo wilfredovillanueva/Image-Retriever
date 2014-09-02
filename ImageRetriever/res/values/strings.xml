@@ -1,5 +1,113 @@
 <resources>
 
     <string name="app_name">ImageRetriever</string>
-
+    <string name="action_settings">Settings</string>
+    <string name="nombre_app">ImageRet</string>
+    <string name="logo_descripcion">Logo de la App</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="guardar_pass">Guardar contraseña</string>
+    <string name="boton_iniciar">Ingresar</string>
+    <string name="title_activity_query">Consulta</string>
+    <string name="cabello">Cabello</string>
+    <string name="rostro">Rostro</string>
+    <string name="forma">Forma</string>
+    <string name="raza">Raza</string>
+    <string name="color">Color</string>
+    <string name="tinte">Tinte</string>
+    <string name="cara">Cara</string>
+    <string name="lesion">Lesion</string>
+    <string name="tamano">Tamaño</string>
+    <string name="grupo_racial">Grupo racial</string>
+    <string name="nariz">Nariz</string>
+    <string name="ojos">Ojos</string>
+    <string name="tipo">Tipo</string>
+    <string name="enviarBoton">Enviar</string>
+    <string name="listaPersonas">Lista de Personas</string>
+    <string-array name="cabello_tamanio">
+        <item >seleccione una opcion</item>
+        <item >calvo</item>
+        <item >corto</item>
+        <item >largo</item>
+        <item >demasiado largo</item>
+    </string-array>
+    <string-array name="cabello_forma">
+        <item >seleccione una opcion</item>
+        <item >lacio</item>
+        <item >crespo</item>
+        <item >ondulado</item>
+    </string-array>
+    <string-array name="cabello_color">
+        <item >seleccione una opcion</item>
+        <item >negro</item>
+        <item >rubio</item>
+        <item >marron</item>
+        <item >castaño</item>
+        <item >rojizo</item>
+    </string-array>
+    <string-array name="rostro_color">
+        <item >seleccione una opcion</item>
+        <item >mestizo</item>
+        <item >blanco</item>
+        <item >moreno</item>
+        <item >rubio</item>
+        <item >amarillo</item>
+    </string-array>
+    <string-array name="ojos_tipo">
+        <item >seleccione una opcion</item>
+        <item >normales</item>
+        <item >saltones</item>
+        <item >hundidos</item>
+        <item >chinos</item>
+    </string-array>
+    <string-array name="ojo_color">
+        <item >seleccione una opcion</item>
+        <item >negros</item>
+        <item >cafes</item>
+        <item >verdes</item>
+        <item >azules</item>
+        <item >castaño</item>
+        <item >gris</item>
+        <item >marrones</item>
+    </string-array>
+    <string-array name="ojos_tamanio">
+        <item >seleccione una opcion</item>
+        <item >mediano</item>
+        <item >pequeño</item>
+        <item >grande</item>
+    </string-array>
+    <string-array name="ojos_lesion">
+        <item >seleccione una opcion</item>
+        <item >no presenta</item>
+        <item >izquierdo</item>
+        <item >derecho</item>
+        <item >ambos</item>
+    </string-array>
+    <string-array name="rostro_forma">
+        <item >seleccione una opcion</item>
+        <item >larga</item>
+        <item >ovalada</item>
+        <item >redonda</item>
+    </string-array>
+    <string-array name="rostro_tamanio">
+        <item >seleccione una opcion</item>
+        <item >grande</item>
+        <item >mediano</item>
+        <item >pequeño</item>
+    </string-array>
+    <string-array name="rostro_raza">
+        <item >seleccione una opcion</item>
+        <item >blanco</item>
+        <item >hispanico</item>
+        <item >africano/caribeño</item>
+        <item >chino</item>
+        <item >arabe</item>
+        <item >indio/pakistani/bangali</item>
+    </string-array>
+	<string-array name="cabello_tinte">
+	    <item >seleccione una opcion</item>
+	    <item >si tiene</item>
+	    <item >no tiene</item>
+	</string-array>
+    
 </resources>
