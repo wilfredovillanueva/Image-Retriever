@@ -19,6 +19,7 @@ import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.json.JSONObject;
 
+
 import com.android.imageretriever.R.array;
 
 import android.app.Activity;
@@ -71,18 +72,39 @@ public class QueryActivity extends Activity {
 	private Spinner bigotes;
 	private Spinner barba;
 	
-	private String cabelloT;
-	private String cabelloF;
-	private String cabelloC;
-	private String pielC;
-	private String ojosC;
+	private String OJOS_TIPO;
+	private String OJOS_COLOR;
+	private String OJOS_TAMANIO;
+	private String OJOS_LESION;
+	private String ROSTRO_FORMA;
+	private String ROSTRO_TAMANIO;
+	private String ROSTRO_COLOR;
+	private String ROSTRO_RAZA;
+	private String CABELLO_TAMANIO;
+	private String CABELLO_COLOR;
+	private String CABELLO_FORMA;
+	private String TIENE_TINTE;
+	private String NARIZ_FORMA;
+	private String NARIZ_RINOMEGALIA;
+	private String NARIZ_RAZA;
+	private String LABIOS;
+	private String CEJAS;
+	private String OREJAS;
+	private String FRENTE;
+	private String CABEZA;
+	private String POMULOS;
+	private String PECASGRANOS;
+	private String CICATRICES;
+	private String BIGOTES;
+	private String BARBA;
 	
-	private int[] cantidadCaracteristicas = new int[12];
-	private int[] caracteristicasFisicas = new int[12];
+	private int[] cantidadCaracteristicas = new int[25];
+	private int[] caracteristicasFisicas = new int[25];
+	private int[] caracteristicasConvertido;
 	
-	private static final String TAG = "MainActivity";
+	private static final String TAG = "QueryActivity";
 	// Direccion URL  DEL servidor que aloja el servicio
-	private static final String SERVICE_URL = "http://192.168.1.38:8080/SRImagenes/rest/individuos";
+	private static final String SERVICE_URL = "http://192.168.1.44:8080/SRImagenes/rest/individuos";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +149,7 @@ public class QueryActivity extends Activity {
 				// TODO Auto-generated method stub
 				cantidadCaracteristicas[1] = parent.getCount() - 1;
 				caracteristicasFisicas[1] = position;
+				System.out.println("caracteristica " + caracteristicasFisicas[1]);
 			}
 
 			@Override
@@ -283,6 +306,7 @@ public class QueryActivity extends Activity {
 				// TODO Auto-generated method stub
 				cantidadCaracteristicas[9] = parent.getCount() - 1;
 				caracteristicasFisicas[9] = position;
+				
 			}
 
 			@Override
@@ -293,16 +317,19 @@ public class QueryActivity extends Activity {
 		
 		});
 		
+		       
+		
 		cabelloForma = (Spinner) findViewById(R.id.cabello_forma_spinner);
 		llenar(cabelloForma, R.array.cabello_forma);
 		cabelloForma.setOnItemSelectedListener(new OnItemSelectedListener() {
-
+			
 			@Override
 			public void onItemSelected(AdapterView<?> parent, View view,
 					int position, long id) {
 				// TODO Auto-generated method stub
 				cantidadCaracteristicas[10] = parent.getCount() - 1;
 				caracteristicasFisicas[10] = position;
+				
 			}
 
 			@Override
@@ -323,6 +350,7 @@ public class QueryActivity extends Activity {
 				// TODO Auto-generated method stub
 				cantidadCaracteristicas[11] = parent.getCount() - 1;
 				caracteristicasFisicas[11] = position;
+				
 			}
 
 			@Override
@@ -331,7 +359,266 @@ public class QueryActivity extends Activity {
 				
 			}
 		});
-		 
+		
+		narizForma = (Spinner) findViewById(R.id.nariz_forma_spinner);
+		llenar(narizForma, R.array.nariz_forma);
+		narizForma.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[12] = parent.getCount() - 1;
+				caracteristicasFisicas[12] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		narizRinomegalia = (Spinner) findViewById(R.id.nariz_rinomegalia_spinner);
+		llenar(narizRinomegalia, R.array.nariz_rinomegalia);
+		narizRinomegalia.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[13] = parent.getCount() - 1;
+				caracteristicasFisicas[13] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		narizRaza = (Spinner) findViewById(R.id.nariz_raza_spinner);
+		llenar(narizRaza, R.array.nariz_raza);
+		narizRaza.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[14] = parent.getCount() - 1;
+				caracteristicasFisicas[14] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		labiosForma = (Spinner) findViewById(R.id.otros_labios_spinner);
+		llenar(labiosForma, R.array.otros_labios);
+		labiosForma.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[15] = parent.getCount() - 1;
+				caracteristicasFisicas[15] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		cejasForma = (Spinner) findViewById(R.id.otros_cejas_spinner);
+		llenar(cejasForma, R.array.otros_cejas);
+		cejasForma.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[16] = parent.getCount() - 1;
+				caracteristicasFisicas[16] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		orejasForma = (Spinner) findViewById(R.id.otros_orejas_spinner);
+		llenar(orejasForma, R.array.otros_orejas);
+		orejasForma.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[17] = parent.getCount() - 1;
+				caracteristicasFisicas[17] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		frenteForma = (Spinner) findViewById(R.id.otros_frente_spinner);
+		llenar(frenteForma, R.array.otros_frente);
+		frenteForma.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[18] = parent.getCount() - 1;
+				caracteristicasFisicas[18] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		cabezaTamaño = (Spinner) findViewById(R.id.otros_cabeza_spinner);
+		llenar(cabezaTamaño, R.array.otros_cabeza);
+		cabezaTamaño.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[19] = parent.getCount() - 1;
+				caracteristicasFisicas[19] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		pomulos = (Spinner) findViewById(R.id.otros_pomulos_spinner);
+		llenar(pomulos, R.array.otros_pomulos);
+		pomulos.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[20] = parent.getCount() - 1;
+				caracteristicasFisicas[20] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		pecas = (Spinner) findViewById(R.id.otros_pecas_granos_spinner);
+		llenar(pecas, R.array.otros_pecas_granos);
+		pecas.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[21] = parent.getCount() - 1;
+				caracteristicasFisicas[21] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		cicatrices = (Spinner) findViewById(R.id.otros_cicatrices_spinner);
+		llenar(cicatrices, R.array.otros_cicatrices);
+		cicatrices.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[22] = parent.getCount() - 1;
+				caracteristicasFisicas[22] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		bigotes = (Spinner) findViewById(R.id.otros_bigotes_spinner);
+		llenar(bigotes, R.array.otros_bigotes);
+		bigotes.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[23] = parent.getCount() - 1;
+				caracteristicasFisicas[23] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
+		
+		barba = (Spinner) findViewById(R.id.otros_barba_spinner);
+		llenar(barba, R.array.otros_barba);
+		barba.setOnItemSelectedListener(new OnItemSelectedListener() {
+
+			@Override
+			public void onItemSelected(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				cantidadCaracteristicas[24] = parent.getCount() - 1;
+				caracteristicasFisicas[24] = position;
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> parent) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+		});
 	}
 	
 	protected void llenar(Spinner spinner, int arrayValues){
@@ -344,37 +631,90 @@ public class QueryActivity extends Activity {
 		spinner.setAdapter(adapter);
 	}
 	
+	public int totalCaracteristicas(){
+		int suma = 0;
+		for(int i = 0; i < cantidadCaracteristicas.length; i++){
+			suma = suma + cantidadCaracteristicas[i];
+		}
+		return suma;
+	}
+	
 	public void consultar(View view){
 		//obtenerCaracteristicas();
-		int n = cantidadCaracteristicas.length;
-		System.out.print("\ncantidad = ");
-		for(int i = 0; i < n; i++){
-			System.out.print(cantidadCaracteristicas[i] + ", ");
-		}
-		n = caracteristicasFisicas.length;
-		System.out.print("\n1 datos = ");
-		for(int i = 0; i < n; i++){
-			System.out.print(caracteristicasFisicas[i] + ", ");
-		}
-		System.out.print("\nconvirtiendo....");
+		System.out.println("\nconsultando...");
 		convertir();
-		System.out.println("convertido....");
-		System.out.print("\n2 datos = ");
-		for(int i = 0; i < n; i++){
-			System.out.print(caracteristicasFisicas[i] + ", ");
-		}
-		System.out.println("convertido....");
-		System.out.println("convertido....");
-		postData(view);
-		Intent i = new Intent(this, ListActivity.class);
-		startActivity(i);
+		
+		OJOS_TIPO = String.valueOf(caracteristicasConvertido[0]);
+		OJOS_COLOR = String.valueOf(caracteristicasConvertido[1]);
+		OJOS_TAMANIO = String.valueOf(caracteristicasConvertido[2]);
+		OJOS_LESION = String.valueOf(caracteristicasConvertido[3]);
+		ROSTRO_FORMA = String.valueOf(caracteristicasConvertido[4]);
+		ROSTRO_TAMANIO = String.valueOf(caracteristicasConvertido[5]);
+		ROSTRO_COLOR = String.valueOf(caracteristicasConvertido[6]);
+		ROSTRO_RAZA = String.valueOf(caracteristicasConvertido[7]);
+		CABELLO_TAMANIO = String.valueOf(caracteristicasConvertido[8]);
+		CABELLO_COLOR = String.valueOf(caracteristicasConvertido[9]);
+		CABELLO_FORMA = String.valueOf(caracteristicasConvertido[10]);
+		TIENE_TINTE = String.valueOf(caracteristicasConvertido[11]);
+		NARIZ_FORMA = String.valueOf(caracteristicasConvertido[12]);
+		NARIZ_RINOMEGALIA = String.valueOf(caracteristicasConvertido[13]);
+		NARIZ_RAZA = String.valueOf(caracteristicasConvertido[14]);
+		LABIOS = String.valueOf(caracteristicasConvertido[15]);
+		CEJAS = String.valueOf(caracteristicasConvertido[16]);
+		OREJAS = String.valueOf(caracteristicasConvertido[17]);
+		FRENTE = String.valueOf(caracteristicasConvertido[18]);
+		CABEZA = String.valueOf(caracteristicasConvertido[19]);
+		POMULOS = String.valueOf(caracteristicasConvertido[20]);
+		PECASGRANOS = String.valueOf(caracteristicasConvertido[21]);
+		CICATRICES = String.valueOf(caracteristicasConvertido[22]);
+		BIGOTES = String.valueOf(caracteristicasConvertido[23]);
+		BARBA = String.valueOf(caracteristicasConvertido[24]);
+		
+		getData(view);
+	}
+	
+	public void getData(View v) {
+		String sampleURL = SERVICE_URL + "/resultados?";
+
+		WebServiceTask wst = new WebServiceTask(WebServiceTask.GET_TASK, this, "recibiendo datos...");
+		
+		String atributos = "ojosTipo=" + OJOS_TIPO + "&"
+				+ "ojosColor=" + OJOS_COLOR + "&" 
+				+ "ojosTamanio=" + OJOS_TAMANIO + "&"
+				+ "ojosLesion=" + OJOS_LESION + "&"
+				+ "rostroForma=" + ROSTRO_FORMA + "&"
+				+ "rostroTamanio=" + ROSTRO_TAMANIO + "&"
+				+ "rostroColor=" + ROSTRO_COLOR + "&"
+				+ "rostroRaza=" + ROSTRO_RAZA + "&"
+				+ "cabelloTamanio=" + ROSTRO_TAMANIO + "&"
+				+ "cabelloColor=" + CABELLO_COLOR + "&"
+				+ "cabelloForma=" + CABELLO_FORMA + "&"
+				+ "tieneTinte=" + TIENE_TINTE + "&"
+				+ "narizForma=" + NARIZ_FORMA + "&"
+				+ "narizRinomegalia=" + NARIZ_RINOMEGALIA + "&"
+				+ "narizRaza=" + NARIZ_RAZA + "&"
+				+ "labios=" + LABIOS + "&"
+				+ "cejas=" + CEJAS + "&"
+				+ "orejas=" + OREJAS + "&"
+				+ "frente=" + FRENTE + "&"
+				+ "cabeza=" + CABEZA + "&"
+				+ "pomulos=" + POMULOS + "&"
+				+ "pecasgranos=" + PECASGRANOS + "&"
+				+ "cicatrices=" + CICATRICES + "&"
+				+ "bigotes=" + BIGOTES + "&"
+				+ "barba=" + BARBA;
+		
+		sampleURL = sampleURL + atributos;
+        
+		wst.execute(new String[] { sampleURL });
 	}
 	
 	public void convertir() {
 		// TODO Auto-generated method stub
+		caracteristicasConvertido = new int[25];
 		for(int i = 0; i < caracteristicasFisicas.length; i++){
 			if(caracteristicasFisicas[i] != 0)
-				caracteristicasFisicas[i] = caracteristicasFisicas[i] + sumaAnteriores(cantidadCaracteristicas, i);
+				caracteristicasConvertido[i] = caracteristicasFisicas[i] + sumaAnteriores(cantidadCaracteristicas, i);
 		}
 	}
 
@@ -390,7 +730,7 @@ public class QueryActivity extends Activity {
 	}
 
 	public void postData(View vw){
-        
+        System.out.println("postData()");
 //        if (firstName.equals("") || lastName.equals("") || email.equals("")) {
 //            Toast.makeText(this, "Please enter in all required fields.",
 //                    Toast.LENGTH_LONG).show();
@@ -399,11 +739,33 @@ public class QueryActivity extends Activity {
         
         WebServiceTask wst = new WebServiceTask(WebServiceTask.POST_TASK, this, "Posting data...");
         
-        wst.addNameValuePair("cabelloTamanio", cabelloT);
-        wst.addNameValuePair("cabelloForma", cabelloF);
-        wst.addNameValuePair("cabelloColor", cabelloC);
-        wst.addNameValuePair("rostroColor", pielC);
-        wst.addNameValuePair("ojosColor", ojosC);
+        
+        
+        wst.addNameValuePair("ojosTipo", OJOS_TIPO);
+        wst.addNameValuePair("ojosColor", OJOS_COLOR);
+        wst.addNameValuePair("ojosTamanio", OJOS_TAMANIO);
+        wst.addNameValuePair("ojosLesion", OJOS_LESION);
+        wst.addNameValuePair("rostroForma", ROSTRO_FORMA);
+        wst.addNameValuePair("rostroTamanio", ROSTRO_TAMANIO);
+        wst.addNameValuePair("rostroColor", ROSTRO_COLOR);
+        wst.addNameValuePair("rostroRaza", ROSTRO_RAZA);
+        wst.addNameValuePair("cabelloTamanio", CABELLO_TAMANIO);
+        wst.addNameValuePair("cabelloColor", CABELLO_COLOR);
+        wst.addNameValuePair("cabelloForma", CABELLO_FORMA);
+        wst.addNameValuePair("tieneTinte", TIENE_TINTE);
+        wst.addNameValuePair("narizForma", NARIZ_FORMA);
+        wst.addNameValuePair("narizRinomegalia", NARIZ_RINOMEGALIA);
+        wst.addNameValuePair("narizRaza", NARIZ_RAZA);
+        wst.addNameValuePair("labios", LABIOS);
+        wst.addNameValuePair("cejas", CEJAS);
+        wst.addNameValuePair("orejas", OREJAS);
+        wst.addNameValuePair("frente", FRENTE);
+        wst.addNameValuePair("cabeza", CABEZA);
+        wst.addNameValuePair("pomulos", POMULOS);
+        wst.addNameValuePair("pecasgranos", PECASGRANOS);
+        wst.addNameValuePair("cicatrices", CICATRICES);
+        wst.addNameValuePair("bigotes", BIGOTES);
+        wst.addNameValuePair("barba", BARBA);
         
         // the passed String is the URL we will POST to
         wst.execute(new String[] { SERVICE_URL });
@@ -429,13 +791,14 @@ public class QueryActivity extends Activity {
 	    private static final int CONN_TIMEOUT = 3000;
 	     
 	    // socket timeout, in milliseconds (waiting for data)
-	    private static final int SOCKET_TIMEOUT = 5000;
+	    private static final int SOCKET_TIMEOUT = 7000;
 	    
 	    private ArrayList<NameValuePair> params = new ArrayList<NameValuePair>();
 	    
 	    private ProgressDialog pDlg = null;
 	    
 	    public WebServiceTask(int taskType, Context mContext, String processMessage) {
+	    	System.out.println("WebServiceTask(" + taskType + ")");
             this.taskType = taskType;
             this.mContext = mContext;
             this.processMessage = processMessage;
@@ -447,6 +810,7 @@ public class QueryActivity extends Activity {
 		}
 
 		protected void onPreExecute() {
+			System.out.println("onPreExecute("+taskType+")");
 	        //hideKeyboard();
 	        showProgressDialog();
 	    }
@@ -454,13 +818,14 @@ public class QueryActivity extends Activity {
 		private void showProgressDialog() {
 			pDlg = new ProgressDialog(mContext);
 	        pDlg.setMessage(processMessage);
-	        pDlg.setProgressDrawable(mContext.getWallpaper());
+	        //pDlg.setProgressDrawable(mContext.getWallpaper());
 	        pDlg.setProgressStyle(ProgressDialog.STYLE_SPINNER);
 	        pDlg.setCancelable(false);
 	        pDlg.show();
 		}
 
 		protected String doInBackground(String... urls) {
+			System.out.println("doInBackground("+taskType+")");
 			// TODO Auto-generated method stub
 			String url = urls[0];
 			String result = "";
@@ -485,8 +850,10 @@ public class QueryActivity extends Activity {
 		}
 		
 		protected void onPostExecute(String response) {
-	        //handleResponse(response);
+			System.out.println("onPostExecute()");
 	        pDlg.dismiss();
+	        System.out.println("response = " + response);
+	        nuevoIntent(response);
 	    }
 
 		private String inputStreamToString(InputStream is) {
@@ -527,12 +894,13 @@ public class QueryActivity extends Activity {
 	            case GET_TASK:
 	                HttpGet httpget = new HttpGet(url);
 	                response = httpclient.execute(httpget);
+	                System.out.println("response: " + response);
 	                break;
 	            }
 	        } catch(Exception e){
 	        	Log.e(TAG, e.getLocalizedMessage(), e);
 			}
-			return null;
+			return response;
 		}
 		
 		// Establish connection and socket (data retrieval) timeouts
@@ -547,16 +915,11 @@ public class QueryActivity extends Activity {
 		}
 		
 	}
-
-	public void handleResponse(String response) {
-		try {
-			JSONObject jso = new JSONObject(response);
-			
-			
-		} catch (Exception e) {
-			Log.e(TAG, e.getLocalizedMessage(), e);
-		}
-		
+	
+	public void nuevoIntent(String response){
+		Intent i = new Intent(this, ListActivity.class);
+		i.putExtra("response", response);
+		startActivity(i);
 	}
 
 }

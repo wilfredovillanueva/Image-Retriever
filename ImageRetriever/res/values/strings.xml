@@ -10,8 +10,20 @@
     <string name="boton_iniciar">Ingresar</string>
     <string name="title_activity_query">Consulta</string>
     <string name="cabello">Cabello</string>
+    <string name="otros">Otros</string>
+    <string name="labios">Labios</string>
+    <string name="cejas">Cejas</string>
+    <string name="orejas">Orejas</string>
+    <string name="frente">Frente</string>
+    <string name="cabeza">Cabeza</string>
+    <string name="pomulos">Pomulos</string>
+    <string name="pecas_granos">Pecas/Granos</string>
+    <string name="cicatrices">Cicatrices</string>
+    <string name="bigotes">Bigotes</string>
+    <string name="barba">Barba</string>
     <string name="rostro">Rostro</string>
     <string name="forma">Forma</string>
+    <string name="rinomegalia">Rinomegalia</string>
     <string name="raza">Raza</string>
     <string name="color">Color</string>
     <string name="tinte">Tinte</string>
@@ -109,5 +121,100 @@
 	    <item >si tiene</item>
 	    <item >no tiene</item>
 	</string-array>
-    
+    <string-array name="nariz_forma">
+        <item >seleccione una opcion</item>
+        <item >corta</item>
+        <item >larga</item>
+        <item >ancha</item>
+        <item >senil</item>
+        <item >traumatica</item>
+        <item >de boxeador</item>
+        <item >con fisuras</item>
+    </string-array>
+    <string-array name="nariz_rinomegalia">
+        <item >seleccione una opcion</item>
+        <item >ninguna</item>
+        <item >grande en todas sus dimensiones</item>
+    </string-array>
+    <string-array name="nariz_raza">
+        <item >seleccione una opcion</item>
+        <item >negroide</item>
+        <item >mestiza</item>
+        <item >asiatica</item>
+    </string-array>
+    <string-array name="otros_labios">
+        <item >seleccione una opcion</item>
+        <item >pequeños</item>
+        <item >medianos</item>
+        <item >gruesos</item>
+        <item >delgados</item>
+    </string-array>
+    <string-array name="otros_cejas">
+        <item >seleccione una opcion</item>
+        <item >arqueadas</item>
+        <item >largas</item>
+        <item >gruesas</item>
+        <item >finas</item>
+        <item >rectas</item>
+    </string-array>
+    <string-array name="otros_orejas">
+        <item >seleccione una opcion</item>
+        <item >redondas</item>
+        <item >largas</item>
+        <item >pequeñas</item>
+        <item >puntiagudas</item>
+        <item >pegadas a la cara</item>
+    </string-array>
+    <string-array name="otros_frente">
+        <item >seleccione una opcion</item>
+        <item >cuadrada</item>
+        <item >ancha</item>
+        <item >estrecha</item>
+        <item >ovalada</item>
+        <item >cuadrada</item>
+        <item >trapezoidal</item>
+    </string-array>
+    <string-array name="otros_cabeza">
+        <item >seleccione una opcion</item>
+        <item >mediana</item>
+        <item >pequeña</item>
+        <item >grande</item>
+    </string-array>
+    <string-array name="otros_pomulos">
+        <item >seleccione una opcion</item>
+        <item >altos</item>
+        <item >bajos</item>
+        <item >centrados</item>
+        <item >pequeños</item>
+    </string-array>
+    <string-array name="otros_pecas_granos">
+        <item >seleccione una opcion</item>
+        <item >no presenta</item>
+        <item >mejilla izquierda</item>
+        <item >mejilla derecha</item>
+        <item >todo el rostro</item>
+    </string-array>
+    <string-array name="otros_cicatrices">
+        <item >seleccione una opcion</item>
+        <item >no presenta</item>
+        <item >mejilla izquierda</item>
+        <item >mejilla derecha</item>
+        <item >ambas mejillas</item>
+    </string-array>
+    <string-array name="otros_bigotes">
+        <item >seleccione una opcion</item>
+        <item >no presenta</item>
+        <item >poco</item>
+        <item >bastante</item>
+        <item >mas o menos</item>
+    </string-array>
+    <string-array name="otros_barba">
+        <item >seleccione una opcion</item>
+        <item >no presenta</item>
+        <item >poco</item>
+        <item >alrededor de labios/poco</item>
+        <item >alrededor de labios/bastante</item>
+        <item >hasta las patillas/poco</item>
+        <item >hasta las patillas/bastante</item>
+    </string-array>
 </resources>

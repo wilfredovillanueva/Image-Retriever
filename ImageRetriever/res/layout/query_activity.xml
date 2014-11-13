@@ -11,16 +11,14 @@
 
     <!-- Contenedor principal -->
 
-    <LinearLayout
-        android:layout_width="fill_parent"
+    <LinearLayout android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginLeft="@dimen/activity_horizontal_margin" >
         
         <!-- Contenedor por grupo de caracteristicas: Cabello -->
         
-        <LinearLayout 
-            android:layout_width="fill_parent"
+        <LinearLayout android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -28,183 +26,163 @@
             
             <!-- Contenedores para texto y lista deslizable -->
 
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/ojos" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="right"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/tipo" />
 
-                <Spinner
-                    android:id="@+id/ojos_tipo_spinner"
+                <Spinner android:id="@+id/ojos_tipo_spinner"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/color" />
 
-                <Spinner
-                    android:id="@+id/ojos_color_spinner"
+                <Spinner android:id="@+id/ojos_color_spinner"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/tamano" />
 
-                <Spinner
-                    android:id="@+id/ojos_tamanio_spinner"
+                <Spinner android:id="@+id/ojos_tamanio_spinner"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/lesion" />
 
-                <Spinner
-                    android:id="@+id/ojos_lesion_spinner"
+                <Spinner android:id="@+id/ojos_lesion_spinner"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
+                
             </LinearLayout>
             
         </LinearLayout>
         
         <!-- Contenedor por grupo de caracteristicas: Rostro -->
 
-        <LinearLayout
-            android:layout_width="fill_parent"
+        <LinearLayout android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:orientation="vertical" >
 
             <!-- Contenedores para texto y lista deslizable -->
 
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/rostro" />
+                
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/forma" />
 
-                <Spinner
-                    android:id="@+id/rostro_forma_spinner"
+                <Spinner android:id="@+id/rostro_forma_spinner"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/tamano" />
 
-                <Spinner
-                    android:id="@+id/rostro_tamanio_spinner"
+                <Spinner android:id="@+id/rostro_tamanio_spinner"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/color" />
 
-                <Spinner
-                    android:id="@+id/rostro_color_spinner"
+                <Spinner android:id="@+id/rostro_color_spinner"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/raza" />
 
-                <Spinner
-                    android:id="@+id/rostro_raza_spinner"
+                <Spinner android:id="@+id/rostro_raza_spinner"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1" />
+                
             </LinearLayout>
             
         </LinearLayout>
 
         <!-- Contenedor por grupo de caracteristicas: Cabello -->
 
-        <LinearLayout
-            android:layout_width="fill_parent"
+        <LinearLayout android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -212,89 +190,328 @@
 
             <!-- Contenedores para texto y lista deslizable -->
 
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/cabello" />
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="right"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/tamano" />
 
-                <Spinner
-                    android:id="@+id/cabello_tamanio_spinner"
+                <Spinner android:id="@+id/cabello_tamanio_spinner"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="right"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/color" />
 
-                <Spinner
-                    android:id="@+id/cabello_color_spinner"
+                <Spinner android:id="@+id/cabello_color_spinner"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="right"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/forma" />
 
-                <Spinner
-                    android:id="@+id/cabello_forma_spinner"
+                <Spinner android:id="@+id/cabello_forma_spinner"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right" />
+                
             </LinearLayout>
             
-            <LinearLayout
-                android:layout_width="fill_parent"
+            <LinearLayout android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:gravity="right"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="@dimen/largo_text_query"
+                <TextView android:layout_width="@dimen/largo_text_query"
                     android:layout_height="wrap_content"
                     android:text="@string/tinte" />
 
-                <Spinner
-                    android:id="@+id/cabello_tinte_spinner"
+                <Spinner android:id="@+id/cabello_tinte_spinner"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right" />
             </LinearLayout>
 
+        </LinearLayout>
+        
+        <!-- Contenedor por grupo de caracteristicas: Nariz -->
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:orientation="vertical" >
+            
+            <!-- Contenedores para texto y lista deslizable -->
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+                
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nariz" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forma" />
+
+                <Spinner android:id="@+id/nariz_forma_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/rinomegalia" />
+
+                <Spinner android:id="@+id/nariz_rinomegalia_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/raza" />
+
+                <Spinner android:id="@+id/nariz_raza_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:orientation="vertical" >
+            
+            <!-- Contenedores para texto y lista deslizable -->
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+                
+                <TextView android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/otros" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/labios" />
+
+                <Spinner android:id="@+id/otros_labios_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cejas" />
+
+                <Spinner android:id="@+id/otros_cejas_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/orejas" />
+
+                <Spinner android:id="@+id/otros_orejas_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/frente" />
+
+                <Spinner android:id="@+id/otros_frente_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cabeza" />
+
+                <Spinner android:id="@+id/otros_cabeza_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pomulos" />
+
+                <Spinner android:id="@+id/otros_pomulos_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pecas_granos" />
+
+                <Spinner android:id="@+id/otros_pecas_granos_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cicatrices" />
+
+                <Spinner android:id="@+id/otros_cicatrices_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bigotes" />
+
+                <Spinner android:id="@+id/otros_bigotes_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
+            <LinearLayout android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="right"
+                android:orientation="horizontal" >
+
+                <TextView android:layout_width="@dimen/largo_text_query"
+                    android:layout_height="wrap_content"
+                    android:text="@string/barba" />
+
+                <Spinner android:id="@+id/otros_barba_spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right" />
+                
+            </LinearLayout>
+            
         </LinearLayout>
 
         <Button android:layout_width="wrap_content"

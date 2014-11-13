@@ -58,6 +58,10 @@ public class Individuo {
 	
 	//private int[] caracteristicas;
 	
+	public Individuo(String dni){
+		this.dni = dni;
+	}
+	
 	public Individuo(String dni, Drawable imagenDrawable, String nombres,
 			String apellidoPaterno, String apellidoMaterno,
 			String fechaNacimiento, String sexo, String direccion) {
